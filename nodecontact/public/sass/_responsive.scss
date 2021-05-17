@@ -1,0 +1,71 @@
+@include media-md {
+    .menu-btn{
+        transition: none;
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+        position: static;
+
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            text-align: right;
+            background: transparent;
+
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &__link{
+                font-size: 1rem;
+            }
+        }
+    }    
+    .social-banner{
+        width: 1rem !important;
+        margin: 2rem;
+    }
+    .work-container{
+        grid-template-columns: auto auto;
+        margin: 3rem;
+    }
+}
+@include media-lg {
+    .nav{
+        .menu-nav__link{
+            font-size: 1.5rem;
+        }
+    }
+    .short-bio{
+        h2{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+        .button{
+            font-size: 2rem;
+        }
+    }
+    .about-container{
+        margin: 4rem;
+        max-width: 1280px;
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    .social-banner{
+        width: 2rem !important;
+        margin: 2rem;
+    }
+
+    .work-container{
+        grid-template-columns: auto auto auto;
+        margin: 3rem;
+    }
+}

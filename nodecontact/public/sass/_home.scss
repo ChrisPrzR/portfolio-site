@@ -1,0 +1,78 @@
+.logo-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    z-index: -1;
+    .text-container{
+        margin: 1rem;
+        width: auto;
+        svg{
+            margin: 1rem;
+            max-width: 90%;
+        }
+    }
+    &::after{
+        position: absolute;
+        animation: fadeIn 3s;
+        content: '';
+        bottom: 0;
+        background: white;
+        height: 3px;
+        width: 95%;
+        border-radius: 1rem;
+        
+    } 
+}
+
+.short-bio{
+    font-family: 'Pompiere';
+    z-index: -2;
+    animation: fadeIn 3s;
+}
+
+.short-bio h2{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.short-bio p{
+    margin: 2rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+}
+
+.short-bio .button-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .button{
+        @include button-styles;
+        text-decoration: none;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Pompiere&display=swap');
+
+$primary-color: #f8f8f8;
+$secondary-color: rgb(82, 197, 202);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin button-styles {
+    display: inline-block;
+    border: 2px solid $secondary-color;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: $secondary-color;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: .3s;
+    &:hover{
+        background-color: #101010;
+        border: 2px solid $secondary-color;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}
+
+@mixin transition-ease{
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media only screen and (min-width: 1024px){
+        @content;
+    }
+}

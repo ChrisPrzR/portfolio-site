@@ -1,0 +1,86 @@
+.work-container{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content:center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content:center;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    max-width: 400px;
+    grid-gap: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px 0 rgba($secondary-color, 0.2), 0 6px 20px 0 rgba($secondary-color, 0.2); 
+
+
+}
+
+.sample-container{
+    img{
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+.description-container{
+    display: flex;
+    flex-direction: column;
+    div{
+        margin-bottom: 1rem;
+    }
+    h3{
+        text-align: center;
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba($secondary-color, 0.5);
+    }
+}
+
+.project-description{
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba($secondary-color, 0.5);
+    p{
+        font-size: 0.9rem;
+        line-height: 1.2;
+        letter-spacing: 1px;
+    }
+}
+
+.tech-stack{
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba($secondary-color, 0.5);
+    p{
+        font-family: 'Pompiere';
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    li{
+        font-size: 0.9rem;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        list-style: none;
+    }
+}
+
+.source{
+    display: inline-block;
+    text-align: center;
+    a{
+        margin: 0.2rem;
+        text-decoration: none;
+        @include button-styles;
+        font-size: 0.8rem;
+        font-weight: 300;
+        &:hover{
+            font-size: 1rem;
+        }
+    }
+}
+

@@ -1,0 +1,29 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    h2{
+        font-size: 3rem;
+        font-weight: 400;
+        color: $secondary-color;
+        margin-top: 2rem;
+    }
+    img{
+        height: 10rem;
+        border-radius: 50%;  
+        box-shadow: 0 4px 8px 0 rgba(256, 256, 256, 0.2), 0 6px 20px 0 rgba(256, 256, 256, 0.19); 
+    }
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    p{
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 1px;
+        letter-spacing: 0.5px;
+    }
+}
