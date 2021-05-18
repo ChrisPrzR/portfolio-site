@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/resources/chris-perez.png">
     <link rel="stylesheet" href="/stylesheets/main.css">
-    <title>Document</title>
+    <title>Christian Perez</title>
 </head>
 <body>
 <header>
@@ -23,12 +24,12 @@
             Home
           </a>
         </li>
-        <li class="menu-nav__item">
+        <li class="menu-nav__item active">
           <a href="about" class="menu-nav__link">
             About Me
           </a>
         </li>
-        <li class="menu-nav__item active">
+        <li class="menu-nav__item">
           <a href="projects" class="menu-nav__link">
             My Work
           </a>
@@ -40,101 +41,31 @@
         </li>
       </ul>
     </nav>
-  </header>
-  <section>
-    <div class="banner big-text--container">
-      <h2>Here is some of my work!</h2>
+</header>
+<section>
+    <div class="banner profile-container">
+        <figure>
+            <img src="/resources/profile-picture.jpg" alt="">
+        </figure>
+        <h2>About me</h2>
+    </div> 
+    <div class="about-container">   
+        <p>Hello! &#128406; My name is Christian Perez and I'm a front end web developer.</p>
+        <br>
+        <p>Although I specialize in frontend web development with tools such as Javascript with React.js, HTML5, CSS3, I like discovering the plethora of tools out there.</p>
+        <br>
+        <p>I'm always looking for elegant and fast solutions that allow me to create great layouts and efficient web applications.</p>
+        <br>
+        <p>I'm from Guadalajara, 🇲🇽. On my spare time, I enjoy traveling &#127890; customizing sneakers &#128095; and helping out translating articles for the spanish spoken community on <a href="https://www.freecodecamp.org/espanol/news/author/christian/">FreeCodeCamp</a>.</p>
+        <br>
+        <p>Thanks for visiting my site!</p>
     </div>
-    <div class="work-container">
-      <div class="project-container">
-        <div class="sample-container">
-          <img src="/resources/social-app.gif" alt="social app demo">
-        </div>
-        <div class="description-container">
-          <div>
-            <h3>Social App</h3>
-          </div>
-          <div class="project-description">
-            <p>This project is a social media app, that allows users to: <br> Create customized profiles, Share their thoughts via text, Like or comment on other people's posts and recover their passwords if they have lost it.</p>
-          </div>
-          <div class="tech-stack">
-            <p>Tech Stack:</p>
-            <ul>
-              <li>React.js</li>
-              <li>Semantic-React</li>
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>MongoDB</li>
-              <li>GraphQL</li>
-            </ul>
-          </div>
-          <div class="source">
-            <a href="https://compassionate-curran-65d161.netlify.app/">Hosted Version</a>
-            <a href="https://github.com/ChrisPrzR/merng-client">Frontend Code</a>
-            <a href="https://github.com/ChrisPrzR/merng-server">Backend Code</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-container">
-        <div class="sample-container">
-          <img src="/resources/calendar-app.gif" alt="calendar app demo">
-        </div>
-        <div class="description-container">
-          <div>
-            <h3>Calendar App</h3>
-          </div>
-          <div class="project-description">
-            <p>This project is a web app, that allows the user to: <br> Create events, Keep their agendas organized and Share their schedule with their team.</p>
-          </div>
-          <div class="tech-stack">
-            <p>Tech Stack:</p>
-            <ul>
-              <li>React.js</li>
-              <li>Redux</li>
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>MongoDB</li>
-            </ul>
-          </div>
-          <div class="source">
-            <a href="https://mern-calendar-chrisprz.herokuapp.com/">Hosted Version</a>
-            <a href="https://github.com/ChrisPrzR/CalendarApp-react">Frontend Code</a>
-            <a href="https://github.com/ChrisPrzR/CalendarApp-CRUD">Backend Code</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-container">
-        <div class="sample-container">
-          <img src="/resources/drink-app.gif" alt="drink app demo">
-        </div>
-        <div class="description-container">
-          <div>
-            <h3>Drink App</h3>
-          </div>
-          <div class="project-description">
-            <p>This web application provides the user: <br> Different ways to obtain a drink recipe, it could be a random drink, or specify if they want a certain ingredient or a certain cocktail.</p>
-          </div>
-          <div class="tech-stack">
-            <p>Tech Stack:</p>
-            <ul>
-              <li>React.js</li>
-              <li>Tailwind CSS</li>
-              <li>The Cocktail DB API</li>
-            </ul>
-          </div>
-          <div class="source">
-            <a href="https://compassionate-curran-65d161.netlify.app/">Hosted Version</a>
-            <a href="https://github.com/ChrisPrzR/drinkApp-2">Code</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="social-media-container social-banner">
+</section>
+<div class="social-media-container social-banner">
       <a href="https://github.com/ChrisPrzR" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
       <a href="https://www.linkedin.com/in/christian-perez-a01640208/" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>
       <a href="mailto:christian@chrispr.me" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope-square" class="svg-inline--fa fa-envelope-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM178.117 262.104C87.429 196.287 88.353 196.121 64 177.167V152c0-13.255 10.745-24 24-24h272c13.255 0 24 10.745 24 24v25.167c-24.371 18.969-23.434 19.124-114.117 84.938-10.5 7.655-31.392 26.12-45.883 25.894-14.503.218-35.367-18.227-45.883-25.895zM384 217.775V360c0 13.255-10.745 24-24 24H88c-13.255 0-24-10.745-24-24V217.775c13.958 10.794 33.329 25.236 95.303 70.214 14.162 10.341 37.975 32.145 64.694 32.01 26.887.134 51.037-22.041 64.72-32.025 61.958-44.965 81.325-59.406 95.283-70.199z"></path></svg></a>    
-  </div>
+</div>
 </body>
 <script src="/main.js"></script>
 

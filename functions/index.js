@@ -1,8 +1,10 @@
+const functions = require("firebase-functions");
 const express = require("express");
 const exphbs = require('express-handlebars');
 const nodemailer = require("nodemailer");
 const path = require("path")
-require("dotenv").config();
+
+
 
 const app = express();
 
@@ -14,8 +16,8 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
 
 //Body Parser Middleware
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json())
 
 app.get('/', (req, res) => {
   res.render('home');
@@ -30,6 +32,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/projects', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=300')
   res.render('projects')
 })
 
@@ -38,30 +41,30 @@ let transporter = nodemailer.createTransport({
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: process.env.USERNAME,
-      pass: process.env.EMAIL_PASSWORD,
+      user: functions.config().email.username,
+      pass: functions.config().email.password, 
     },
 });
 
-app.post("/send", (req, res) => {
-      //2. You can configure the object however you want
+app.post("/send", async(req, res) => {
       const mail = {
         from: req.body.name,
-        to: process.env.RECEIVER,
-        text: `${req.body.name} <${req.body.email}> \n${req.body.message}`,
+        to: functions.config().email.receiver,
+        subject: "Contact Request",
+        html: `<ul>
+            <li>Name: ${req.body.name}</li>
+            <li>Email: ${req.body.email}</li>
+            <li>Message: ${req.body.message}</li>
+            </ul>`,
       };
   
-      //3.
-      transporter.sendMail(mail, (err, data) => {
+      await transporter.sendMail(mail, (err, data) => {
         if (err) {
           console.log(err);
-          res.render('contact', {msg: 'Something went wrong, please try again'});
+          res.render('contact', {msg: 'Something went wrong please try my email, or Linkedin. I am probably working to fix this'});
         } else {
           res.render('contact', {msg: 'I have received your message! I will get back to you ASAP!'})}
       });
     });
 
-  const PORT = process.env.PORT || 3004;
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
-});
+exports.app = functions.https.onRequest(app)
